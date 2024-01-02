@@ -56,6 +56,9 @@ if __name__ == "__main__":
 ```
 
 ## File Structure
-Two files currently used:
+Two files currently used: 
+- [milestone2.py]
+- 
+
 
 ## License
