@@ -1,17 +1,33 @@
-import random 
-word_list = ["Apple", "Banana", "Mango", "Strawberry", "Pineapple"]
+import random
 
-word = random.choice(word_list)
-# Ask the user to enter a single letter
-guess = input("Please enter a single letter: ")
+def get_random_fruit():
+    """Return a random fruit from the list."""
+    fruit_list = ["Apple", "Banana", "Mango", "Strawberry", "Pineapple"]
+    return random.choice(fruit_list)
 
-# Check if the input is a single letter and alphabetical
-if len(guess) == 1 and guess.isalpha():
-    print("Good Guess!:", guess)
-else:
-    print("Oops! That is not a vaild input.")
+def get_user_guess():
+    """Prompt the user for a single letter and validate the input."""
+    guess = input("Please enter a single letter: ")
+    return guess if len(guess) == 1 and guess.isalpha() else None
 
-# Display the entered letter
-print("You entered:", guess)
+def display_guess_result(guess):
+    """Display whether the user's guess is valid or not."""
+    if guess:
+        print("Good Guess!:", guess)
+    else:
+        print("Oops! That is not a valid input.")
 
-print("Randomly selected word:", word)
+def main():
+    random_fruit = get_random_fruit()
+    user_guess = get_user_guess()
+
+    display_guess_result(user_guess)
+
+    # Display the entered letter
+    print("You entered:", user_guess)
+
+    # Display randomly selected fruit
+    print("Randomly selected fruit:", random_fruit)
+
+if __name__ == "__main__":
+    main()
