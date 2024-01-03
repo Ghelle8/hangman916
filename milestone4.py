@@ -15,31 +15,47 @@ class Hangman:
     def check_guess(self, guess):
         guess = guess.lower()
 
-        if guess in self.word.lower():
+        if self._is_guess_in_word(guess):
             print(f"Good guess! {guess} is in the word.")
-
-            for i, letter in enumerate(self.word):
-                if letter == guess:
-                    self.word_guessed[i] = guess
-
-            self.num_letters -= 1
+            self._update_word_guessed(guess)
         else:
-            self.num_lives -= 1
-            print(f"Sorry, {guess} is not in the word.")
-            print(f"You have {self.num_lives} lives left.")
+            self._handle_wrong_guess(guess)
 
     def ask_for_input(self):
         while self.num_lives > 0 and self.num_letters > 0:
             guess = input("Please guess a letter: ")
 
-            if not (len(guess) == 1 and guess.isalpha()):
+            if not self._is_valid_guess(guess):
                 print("Invalid letter. Please, enter a single alphabetical character.")
-            elif guess in self.list_of_guesses:
+            elif self._has_already_tried(guess):
                 print("You already tried that letter!")
             else:
                 self.check_guess(guess)
                 self.list_of_guesses.append(guess)
 
+        self._end_game()
+
+    def _is_guess_in_word(self, guess):
+        return guess in self.word.lower()
+
+    def _update_word_guessed(self, guess):
+        for i, letter in enumerate(self.word):
+            if letter == guess:
+                self.word_guessed[i] = guess
+        self.num_letters -= 1
+
+    def _handle_wrong_guess(self, guess):
+        self.num_lives -= 1
+        print(f"Sorry, {guess} is not in the word.")
+        print(f"You have {self.num_lives} lives left.")
+
+    def _is_valid_guess(self, guess):
+        return len(guess) == 1 and guess.isalpha()
+
+    def _has_already_tried(self, guess):
+        return guess in self.list_of_guesses
+
+    def _end_game(self):
         if self.num_lives == 0:
             print("Sorry, you ran out of lives. Game over!")
         else:
