@@ -4,8 +4,14 @@
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
+  - [Word Selection](#word-selection)
+  - [User Input and Validation](#user-input-and-validation)
+  - [Game Logic](#game-logic)
+    - [check_guess(secret_word, guess)](#check_guesssecret_word-guess)
+    - [ask_for_input()](#ask_for_input)
 - [File Structure](#file-structure)
 - [License](#license)
+
 
 ## Description
 Hangman is a classic game in which a player thinks of a word and the other player tries to guess that word within a certain amount of attempts.
@@ -45,10 +51,14 @@ print("You entered:", guess)
 The game logic is encapsulated in functions. The check_guess function checks if the guessed letter is in the word, and the ask_for_input function handles the user input and game loop.
 
 #### check_guess(secret_word, guess)
-Describe the details of the game logic here...
+This function checks if the guessed letter is in the word. If the guess is correct, it updates the word_guessed list.
+```python
+def check_guess(secret_word, guess):
+    # Game logic details...
+```
 
 #### ask_for_input()
-Describe the details of the game loop here...
+This function contains the game loop, prompting the user for guesses until they run out of lives or successfully guess the word.
 ``` python
 if __name__ == "__main__":
     # Call the ask_for_input function to start the game
@@ -56,9 +66,10 @@ if __name__ == "__main__":
 ```
 
 ## File Structure
-Two files currently used: 
+The files currently used: 
 - [milestone2.py]
 - [milestone3.py]
+- [milestone4.py]
 
 
 ## License
