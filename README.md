@@ -20,6 +20,36 @@ This is an implementation of the Hangman game, where the computer thinks of a wo
 
 ## Installation
 
+### Prerequisites
+Make sure you have the following installed on your system:
+
+- Python (version 3.9.6)
+
+### Clone the Repository
+```bash
+git clone https://github.com/Ghelle8/Hangman916.git
+```
+### Navigate to the Project Directory
+```bash
+cd YourHangmanRepository
+```
+### Create a Virtual Environment (Optional but Recommended)
+```bash
+python3 -m venv venv
+```
+On Windows:
+```bash
+.\venv\Scripts\activate
+```
+On MacOS/Linux:
+```bash
+source venv/bin/activate
+```
+### Run the Hangman game
+
+
+Now you're all set! Start playing the Hangman game by following the instructions in the Usage section.
+
 ## Usage
 ### Word Selection
 The computer selects a random word from a predefined list of fruits:
