@@ -1,32 +1,31 @@
 import random
 
-def check_guess(secret_word, guess):
-    # Step 2: Convert the guess into lower case
-    guess = guess.lower()
+def display_success_message(letter):
+    print(f"Good guess! {letter} is in the word.")
 
-    # Step 3: Check if the guess is in the word
+def display_error_message(letter):
+    print(f"Sorry, {letter} is not in the word. Try again.")
+
+def check_guess(secret_word, guess):
+    guess = guess.lower()
     if guess in secret_word.lower():
-        # Step 4: If the guess is in the word, print a success message
-        print(f"Good guess! {guess} is in the word.")
+        display_success_message(guess)
         return True
     else:
-        # Step 5: If the guess is not in the word, print an error message
-        print(f"Sorry, {guess} is not in the word. Try again.")
+        display_error_message(guess)
         return False
 
-def ask_for_input():
-    # Step 1: Generate a random secret word
+def generate_secret_word():
     word_list = ["Apple", "Banana", "Mango", "Strawberry", "Pineapple"]
-    secret_word = random.choice(word_list)
+    return random.choice(word_list)
+
+def ask_for_input():
+    secret_word = generate_secret_word()
 
     while True:
-        # Step 2: Move the code for getting user input into this function block
-        guess = input("Please guess a letter: ")
-
-        # Step 3: Call the check_guess function to check if the guess is in the word
-        if check_guess(secret_word, guess):
+        user_guess = input("Please guess a letter: ")
+        if check_guess(secret_word, user_guess):
             break
 
 if __name__ == "__main__":
-    # Step 4: Call the ask_for_input function to test your code
     ask_for_input()
