@@ -99,9 +99,6 @@ if __name__ == "__main__":
 
 ## File Structure
 The files currently used: 
-- [milestone2.py]
-- [milestone3.py]
-- [milestone4.py]
 - [milestone5.py]
 
 
