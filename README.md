@@ -15,7 +15,7 @@
     - [check_guess(secret_word, guess)](#check_guesssecret_word-guess)
     - [ask_for_input()](#ask_for_input)
 - [File Structure](#file-structure)
-- [License](#license
+- [License](#license)
 
 ## Description
 Hangman is a classic game in which a player thinks of a word and the other player tries to guess that word within a certain amount of attempts.
@@ -99,9 +99,6 @@ if __name__ == "__main__":
 
 ## File Structure
 The files currently used: 
-- [milestone2.py]
-- [milestone3.py]
-- [milestone4.py]
 - [milestone5.py]
 
 
