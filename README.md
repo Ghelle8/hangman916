@@ -15,7 +15,7 @@
     - [check_guess(secret_word, guess)](#check_guesssecret_word-guess)
     - [ask_for_input()](#ask_for_input)
 - [File Structure](#file-structure)
-- [License](#license
+- [License](#license)
 
 ## Description
 Hangman is a classic game in which a player thinks of a word and the other player tries to guess that word within a certain amount of attempts.
