@@ -1,8 +1,13 @@
 # Hangman
 
 ## Table of Contents
-- [Description](#description)
+ [Description](#description)
 - [Installation](#installation)
+  - [Prerequisites](#prerequisites)
+  - [Clone the Repository](#clone-the-repository)
+  - [Navigate to the Project Directory](#navigate-to-the-project-directory)
+  - [Create a Virtual Environment (Optional but Recommended)](#create-a-virtual-environment-optional-but-recommended)
+  - [Run the Hangman game](#run-the-hangman-game)
 - [Usage](#usage)
   - [Word Selection](#word-selection)
   - [User Input and Validation](#user-input-and-validation)
@@ -10,8 +15,7 @@
     - [check_guess(secret_word, guess)](#check_guesssecret_word-guess)
     - [ask_for_input()](#ask_for_input)
 - [File Structure](#file-structure)
-- [License](#license)
-
+- [License](#license
 
 ## Description
 Hangman is a classic game in which a player thinks of a word and the other player tries to guess that word within a certain amount of attempts.
@@ -46,8 +50,6 @@ On MacOS/Linux:
 source venv/bin/activate
 ```
 ### Run the Hangman game
-
-
 Now you're all set! Start playing the Hangman game by following the instructions in the Usage section.
 
 ## Usage
@@ -100,6 +102,23 @@ The files currently used:
 - [milestone2.py]
 - [milestone3.py]
 - [milestone4.py]
+- [milestone5.py]
 
 
 ## License
+Apache License
+Version 2.0, January 2004
+
+Copyright [year] [author]
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
