@@ -4,6 +4,9 @@ class Hangman:
     def __init__(self, word_list, num_lives=5):
         self.word_list = word_list
         self.num_lives = num_lives
+        self.reset_game()
+
+    def reset_game(self):
         self.word = self._get_random_word()
         self.word_guessed = ['_'] * len(self.word)
         self.num_letters = len(set(self.word))
@@ -61,13 +64,6 @@ class Hangman:
         else:
             print("Congratulations! You guessed the word!")
 
-# Testing the Hangman class
-if __name__ == "__main__":
-    words_to_guess = ["apple", "banana", "orange", "grape", "strawberry"]
-    hangman_game = Hangman(words_to_guess)
-    hangman_game.ask_for_input()
-    print(f"Word to guess: {hangman_game.word_guessed}")
-    print(f"Number of unique letters: {hangman_game.num_letters}")
 def play_game(word_list):
     num_lives = 5
     game = Hangman(word_list, num_lives)
@@ -86,4 +82,3 @@ def play_game(word_list):
 if __name__ == "__main__":
     words_to_guess = ["apple", "banana", "orange", "grape", "strawberry"]
     play_game(words_to_guess)
-
